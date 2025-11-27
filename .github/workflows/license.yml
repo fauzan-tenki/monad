@@ -11,13 +11,13 @@ on:
       - 'third_party/**'
   pull_request:
     branches: ["main"]
-    types: [ opened, synchronize, reopened, edited ]
+    types: [opened, synchronize, reopened, edited]
     paths-ignore:
       - 'third_party/**'
 
 jobs:
   check-license:
-    runs-on: ubuntu-24.04-32
+    runs-on: tenki-standard-autoscale
 
     steps:
       - name: Checkout repository
