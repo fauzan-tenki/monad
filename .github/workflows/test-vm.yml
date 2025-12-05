@@ -20,7 +20,7 @@ concurrency:
 jobs:
     build:
         name: Test compiler
-        runs-on: tenki-standard-autoscale
+        runs-on: tenki-local-macos-26-4c-16g
         strategy:
           matrix:
             build:
@@ -106,7 +106,7 @@ jobs:
 
     fuzz:
       name: VM Fuzz Tests
-      runs-on: tenki-standard-autoscale
+      runs-on: tenki-local-macos-26-4c-16g
       steps:
       - name: Generate token
         id: generate_token
@@ -155,7 +155,7 @@ jobs:
 
     python-code-quality:
         name: Python code quality checks
-        runs-on: tenki-standard-autoscale
+        runs-on: tenki-local-macos-26-4c-16g
         steps:
             - uses: actions/checkout@v4
               with:
